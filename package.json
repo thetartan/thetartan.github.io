@@ -10,6 +10,12 @@
   },
   "scripts": {
     "start": "xdg-open index.html",
+    "build:tartan": "cd node_modules/tartan && npm run build",
+    "build:tartan-processing": "cd node_modules/tartan-processing && npm run build",
+    "build:tartan-render": "cd node_modules/tartan-render && npm run build",
+    "build:tartan-schema": "cd node_modules/tartan-schema && npm run build",
+    "build:angular-tartan": "cd node_modules/angular-tartan && npm run build",
+    "postinstall": "npm run build:tartan && npm run build:tartan-processing && npm run build:tartan-render && npm run build:tartan-schema && npm run build:angular-tartan",
     "build": "gulp"
   },
   "author": {
@@ -18,14 +24,22 @@
   },
   "license": "MIT",
   "dependencies": {
-    "angular-tartan": "^0.5.1",
+    "angular-tartan": "git+https://github.com/thetartan/angular-tartan.git",
     "jquery": "^3.1.1",
     "lodash": "^4.17.2",
-    "tartan": "^4.3.0"
+    "tartan": "git+https://github.com/thetartan/tartan.git",
+    "tartan-processing": "git+https://github.com/thetartan/tartan-processing.git",
+    "tartan-render": "git+https://github.com/thetartan/tartan-render.git",
+    "tartan-schema": "git+https://github.com/thetartan/tartan-schema.git"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "json-loader": "^0.5.4",
+    "raw-loader": "^0.5.1",
+    "val-loader": "^0.5.0",
+    "webpack": "^1.14.0"
   },
+  "repository": "https://github.com/thetartan/thetartan.github.io.git",
   "contributors": [
     {
       "name": "Levko Kravets",
