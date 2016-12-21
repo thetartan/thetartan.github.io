@@ -15,7 +15,8 @@
     "build:tartan-render": "cd node_modules/tartan-render && npm run build",
     "build:tartan-schema": "cd node_modules/tartan-schema && npm run build",
     "build:angular-tartan": "cd node_modules/angular-tartan && npm run build",
-    "postinstall": "npm run build:tartan && npm run build:tartan-processing && npm run build:tartan-render && npm run build:tartan-schema && npm run build:angular-tartan",
+    "build:identartan": "cd node_modules/identartan && npm run build",
+    "postinstall": "npm run build:tartan && npm run build:tartan-processing && npm run build:tartan-render && npm run build:tartan-schema && npm run build:angular-tartan && npm run build:identartan",
     "build": "gulp"
   },
   "author": {
@@ -25,6 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "angular-tartan": "git+https://github.com/thetartan/angular-tartan.git",
+    "identartan": "git+https://github.com/thetartan/identartan.git",
     "jquery": "^3.1.1",
     "lodash": "^4.17.2",
     "tartan": "git+https://github.com/thetartan/tartan.git",

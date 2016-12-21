@@ -14,6 +14,7 @@ gulp.task('default', function() {
     path.join(nodeModulesDir, 'tartan-processing/dist/tartan-processing.min.js'),
     path.join(nodeModulesDir, 'tartan-render/dist/tartan-render.min.js'),
     path.join(nodeModulesDir, 'tartan-schema/dist/tartan-schema.min.js'),
+    path.join(nodeModulesDir, 'identartan/dist/identartan.min.js'),
     path.join(nodeModulesDir, 'lodash/lodash.min.js'),
     path.join(nodeModulesDir, 'jquery/dist/jquery.min.js')
   ]).pipe(gulp.dest(assetsDir));
